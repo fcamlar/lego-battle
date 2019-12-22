@@ -1,0 +1,68 @@
+{
+    "speakLaunchRequest": [
+        "<audio src='soundbank://soundlibrary/musical/amzn_sfx_musical_drone_intro_01'/>Hello, this is the Lego Battle skill. YOu can ask the robot to move to different places, to set different speed and targets, to change and use different weapons, to find colors in the color line, and you can also use the remote control in alexa display or the lego mindstorm one.",
+        "<voice name='Justin'> Hello, chief. I am the lego robot. I'm here to fulfill your orders, so tell me what to do. . </voice>"
+    ],
+    "speakNoGadget": [
+        " I couldn't find a Brick connected to this Echo device. Please check to make sure your EV3 Brick is connected, and try again."
+    ],
+    "speakChangeTool": [
+        "OK, robot has left the ",
+        "and the new weapon that the robot has is the "
+    ],
+    "speakToolNotKnown": [
+        "I don't know what is the toool I have. Could you please tell me which one is it? "
+    ],
+    "speakUseTool": [
+        " Roger that!, I am using the ",
+        " on the target. "
+    ],
+    "speakNotRightTool": [
+        "  Sorry chief, I cannot use the ",
+        " to execute that command. Maybe you need to change my weapon. "
+    ],
+    "speakGoSomewhere": [
+        " OK chief, Moving now, destination:  "
+    ],
+    "speakHomeButtonEvent": [
+        " Home, sweet home! . "
+    ],
+    "speakAlreadyThere": [
+        " I am here already chief. what do you want me to do? "
+    ],
+    "speakFindColor": [
+        " That is easy. Starting to search color "
+    ],
+    "speakFindColorEvent": [
+        " Color "
+    ],
+    "speakFindColorTargetEvent": [
+        " I stop here. I found color "
+    ],
+    "speakNoFindColorEvent": [
+        "  I could not find that color. "
+    ],
+    "speakSetSpeed": [
+        " All right! I am setting speed to "
+    ],
+    "speakSetTarget": [
+        " At your service! Target set to "
+    ],
+    "speakRemoteContol": [
+        " <audio src='soundbank://soundlibrary/transportation/amzn_sfx_car_honk_long_1x_02'/> <amazon:emotion name='excited' intensity='high'> Now you can use the Screen arrows to move the robot forward or backwards, and turn left or right 90 degrees. </amazon:emotion> "
+    ],
+    "speakNoDisplay": [
+        " This Echo device has no display to show the remote control to manage the Robot. "
+    ],
+    "speakNoPositionKnown": [
+        " As the remote control has been used to manage the robot The position is unknow. ",
+        " Please, put the robot in home position and push the button in the robot sensor. "
+    ],
+    "speakNoPositionKnownColor": [
+        " The position of the robot is unknow because the color found could be anywhere in the line. ",
+        " Please, put the robot in home position and push the button in the robot sensor. "
+    ],
+    "speakHelp": " Try to ask me things like: move to the heliport, the weapon is the gun, the target is the boat, find a color, come back home, smash the hammer, fire the gun, show me the remote control, and I will send the command to the robot",
+    "speakCancelAndStopSpeechOutput": " It was a pleasure, we heard each other soon. ",
+    "speakError": "Sorry, I had trouble doing what you asked. Please try again."
+}

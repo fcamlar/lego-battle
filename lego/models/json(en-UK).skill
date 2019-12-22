@@ -1,0 +1,1037 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "lego battle",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "changeTool",
+                    "slots": [
+                        {
+                            "name": "verbChange",
+                            "type": "verbChangeType"
+                        },
+                        {
+                            "name": "introChange",
+                            "type": "introChangeType"
+                        },
+                        {
+                            "name": "finalTool",
+                            "type": "toolType",
+                            "samples": [
+                                "it is the {finalTool}",
+                                "the {finalTool}",
+                                "{finalTool}"
+                            ]
+                        },
+                        {
+                            "name": "initialTool",
+                            "type": "toolType"
+                        }
+                    ],
+                    "samples": [
+                        "{introChange} {verbChange} from {initialTool} to {finalTool}",
+                        "{introChange} {verbChange} to {finalTool}"
+                    ]
+                },
+                {
+                    "name": "useTool",
+                    "slots": [
+                        {
+                            "name": "actionUse",
+                            "type": "actionUseType",
+                            "samples": [
+                                "{actionUse} ",
+                                "{actionUse} with the {toolUse}",
+                                "{actionUse} the {toolUse}",
+                                "{actionUse} {toolUse}"
+                            ]
+                        },
+                        {
+                            "name": "toolUse",
+                            "type": "toolType"
+                        }
+                    ],
+                    "samples": [
+                        "{actionUse} with the {toolUse}",
+                        "{actionUse} the {toolUse}",
+                        "{actionUse}",
+                        "{actionUse} {toolUse}"
+                    ]
+                },
+                {
+                    "name": "goSomewhere",
+                    "slots": [
+                        {
+                            "name": "verbGo",
+                            "type": "verbGoType"
+                        },
+                        {
+                            "name": "placeToGo",
+                            "type": "placeToGoType",
+                            "samples": [
+                                "{verbGo} {placeToGo}",
+                                "{verbGo} the {placeToGo}",
+                                "the {placeToGo}",
+                                "{placeToGo}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{verbGo} the {placeToGo}",
+                        "{verbGo} {placeToGo}"
+                    ]
+                },
+                {
+                    "name": "findColor",
+                    "slots": [
+                        {
+                            "name": "verbFind",
+                            "type": "verbFindType"
+                        },
+                        {
+                            "name": "colorFind",
+                            "type": "colorFindType",
+                            "samples": [
+                                "color {colorFind}",
+                                "{verbFind} {colorFind}",
+                                "{colorFind}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "color {colorFind}",
+                        "{verbFind} color {colorFind}",
+                        "{verbFind} {colorFind}"
+                    ]
+                },
+                {
+                    "name": "setSpeed",
+                    "slots": [
+                        {
+                            "name": "speed",
+                            "type": "speedType",
+                            "samples": [
+                                "{speed}"
+                            ]
+                        },
+                        {
+                            "name": "verbSet",
+                            "type": "verbSetType"
+                        }
+                    ],
+                    "samples": [
+                        "{speed} speed",
+                        "{verbSet} {speed} speed",
+                        "{verbSet} {speed}",
+                        "{speed}"
+                    ]
+                },
+                {
+                    "name": "setTarget",
+                    "slots": [
+                        {
+                            "name": "verbSet",
+                            "type": "verbSetType"
+                        },
+                        {
+                            "name": "target",
+                            "type": "targetType",
+                            "samples": [
+                                "{target}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{verbSet} {target}",
+                        "{target}",
+                        "{verbSet} {target}  as target "
+                    ]
+                },
+                {
+                    "name": "remoteControl",
+                    "slots": [
+                        {
+                            "name": "introRemote",
+                            "type": "introRemoteType"
+                        },
+                        {
+                            "name": "remote",
+                            "type": "remoteType",
+                            "samples": [
+                                "the {remote}",
+                                "{remote}"
+                            ]
+                        },
+                        {
+                            "name": "endRemote",
+                            "type": "endRemoteType"
+                        }
+                    ],
+                    "samples": [
+                        "{remote}",
+                        "{introRemote} {remote}",
+                        "{introRemote} {remote} {endRemote}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "introChangeType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "the new tool",
+                                "synonyms": [
+                                    "the tool now",
+                                    "the weapon now",
+                                    "the new weapon"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I want to",
+                                "synonyms": [
+                                    "let's",
+                                    "I would like to change",
+                                    "i'd like to",
+                                    "i'll be",
+                                    "i'll",
+                                    "I'm",
+                                    "I will",
+                                    "I am ",
+                                    "I am going to"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "verbChangeType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "is"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "change",
+                                "synonyms": [
+                                    "switch",
+                                    "swap",
+                                    "shift",
+                                    "exchange",
+                                    "changing"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "toolType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "blade",
+                                "synonyms": [
+                                    "knifes"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "picker",
+                                "synonyms": [
+                                    "catcher",
+                                    "claw"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "gun",
+                                "synonyms": [
+                                    "shooter",
+                                    "fusil",
+                                    "shotgun",
+                                    "cannon",
+                                    "canyon",
+                                    "revolver",
+                                    "pistole",
+                                    "pistol"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hammer",
+                                "synonyms": [
+                                    "crusher",
+                                    "smashing machine",
+                                    "breaker"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "actionUseType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "leave",
+                                "synonyms": [
+                                    "open",
+                                    "drop",
+                                    "put"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "smash",
+                                "synonyms": [
+                                    "pick up",
+                                    "crash",
+                                    "hit"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pick",
+                                "synonyms": [
+                                    "close",
+                                    "take",
+                                    "get",
+                                    "catch",
+                                    "grab",
+                                    "collect"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "use",
+                                "synonyms": [
+                                    "use weapon",
+                                    "use the weapon",
+                                    "employ",
+                                    "utilize"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "shoot",
+                                "synonyms": [
+                                    "discharge",
+                                    "fire"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "verbGoType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "go",
+                                "synonyms": [
+                                    "march to",
+                                    "march",
+                                    "travel to",
+                                    "get to ",
+                                    "depart to",
+                                    "move to",
+                                    "go to"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "verbFindType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "find",
+                                "synonyms": [
+                                    "search for",
+                                    "search"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "colorFindType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Yellow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blue"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Green"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Red"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "placeToGoType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "home",
+                                "synonyms": [
+                                    "garage",
+                                    "house",
+                                    "begining"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "parking",
+                                "synonyms": [
+                                    "parking space",
+                                    "parking lot",
+                                    "car park"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "trainstation",
+                                "synonyms": [
+                                    "train depot",
+                                    "station",
+                                    "train station",
+                                    "railway station"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "heliport",
+                                "synonyms": [
+                                    "helicopter parking"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "port",
+                                "synonyms": [
+                                    "harbor",
+                                    "harbour"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "speedType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "normal",
+                                "synonyms": [
+                                    "medium"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "slow",
+                                "synonyms": [
+                                    "slow down",
+                                    "very slow"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fast",
+                                "synonyms": [
+                                    "very fast"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "verbSetType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "the target is",
+                                "synonyms": [
+                                    "the objective is",
+                                    "target is",
+                                    "speed is",
+                                    "the speed is"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "attack",
+                                "synonyms": [
+                                    "attack the",
+                                    "target the",
+                                    "point to",
+                                    "point",
+                                    "target"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "go",
+                                "synonyms": [
+                                    "move"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "set",
+                                "synonyms": [
+                                    "adjust to",
+                                    " set up",
+                                    "establish"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "targetType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "mobile",
+                                "synonyms": [
+                                    "moving target",
+                                    "beacon",
+                                    "mobile target"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "plane",
+                                "synonyms": [
+                                    "aeroplane"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "boat",
+                                "synonyms": [
+                                    "fireman boat",
+                                    "ship"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tree",
+                                "synonyms": [
+                                    "palm tree"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tractor",
+                                "synonyms": [
+                                    "car"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "remoteType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "remote",
+                                "synonyms": [
+                                    "control",
+                                    "arrows",
+                                    "remote control"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "introRemoteType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "I want to use the"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "show me",
+                                "synonyms": [
+                                    "show",
+                                    "display",
+                                    "put the",
+                                    "put",
+                                    "show me the"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "endRemoteType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "in the screen",
+                                "synonyms": [
+                                    "on the display",
+                                    "in thew display",
+                                    "on the screen"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "changeTool",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "verbChange",
+                            "type": "verbChangeType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "introChange",
+                            "type": "introChangeType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "finalTool",
+                            "type": "toolType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.587069662008.1208147414302"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.587069662008.1208147414302.59477990530"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "initialTool",
+                            "type": "toolType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "goSomewhere",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "verbGo",
+                            "type": "verbGoType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "placeToGo",
+                            "type": "placeToGoType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1035837624486.1135218759553"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.1035837624486.1135218759553.530794908058"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "findColor",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "verbFind",
+                            "type": "verbFindType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "colorFind",
+                            "type": "colorFindType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.466539703198.346148550212"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.466539703198.346148550212.1516622752676"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "useTool",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "actionUse",
+                            "type": "actionUseType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.916101919790.528094045757"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.916101919790.528094045757.319419537724"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "toolUse",
+                            "type": "toolType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "remoteControl",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "introRemote",
+                            "type": "introRemoteType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "remote",
+                            "type": "remoteType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1559268334412.876198290029"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.1559268334412.876198290029.227124618507"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "endRemote",
+                            "type": "endRemoteType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "setSpeed",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "speed",
+                            "type": "speedType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.614684577938.752922341004"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.614684577938.752922341004.383486280156"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "verbSet",
+                            "type": "verbSetType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "setTarget",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "verbSet",
+                            "type": "verbSetType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "target",
+                            "type": "targetType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.552437259077.1308421878288"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.934431664560.589802688522.1546415534686"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.587069662008.863596428190",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what tool?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.587069662008.1208147414302",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what is the tool that robot will stay with?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "with what tool will the robot stay?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "what is the tool you are finally leaving on the robot?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.587069662008.1208147414302.59477990530",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "The only tools I know are the gun, the picker, the hammer and the blade, wich one then"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Sorry, I did not understand it correctly. Is it the gun, the picker, the hammer or the blade"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.466539703198.346148550212.1516622752676",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "It looks like there is only red, green, blue and yellow. Which one then?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "I need you to choose between red, green, blue and yellow, so, what color?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.466539703198.346148550212",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I could not understand what color. Can you repeat?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "I need you to specify the colo you want the robot to search, between red, green, blue and yellow. What color do you choose?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.916101919790.528094045757",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Have a look into the weapon the robot has and tell me what robot should do, fire, pick or leave, smash or use the tool."
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Well, you can fire the gun, pick or leave with the picker, smash with the hammer, or use the blade. What do you want the robot to do?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.916101919790.528094045757.319419537724",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Robot can fire, pick or leave, smash or use the tool. what does the robot do?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1035837624486.1135218759553",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the place you want the robot to go?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1035837624486.1135218759553.530794908058",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Places the robot can go are, heliport, parking, train station and port. which then?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1559268334412.876198290029",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what do you want to see in the echo device screen?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1559268334412.876198290029.227124618507",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I have only a remote control that you can use in the screen. what do you want me to display?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.614684577938.752922341004.383486280156",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please, choose between fast, normal or slow. what then?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.552437259077.1308421878288",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "There are four targets possible. The tree, the boat, the plane, the tractor, and the mobile target. Which one should be the target?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.614684577938.752922341004",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You can choose between fast, normal and slow speed. Which one?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.934431664560.589802688522.1546415534686",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You can set the tree, the boat, the plane, the tractor or  the mobile target, the attack objective. Which one you want?"
+                    }
+                ]
+            }
+        ]
+    }
+}

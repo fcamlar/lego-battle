@@ -1,0 +1,95 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "import": [{
+        "name": "alexa-layouts",
+        "version": "1.0.0"
+    }],
+    "resources": [{
+        "description": "Common margins and padding",
+        "dimensions": {
+            "marginTop": 40,
+            "marginLeft": 60,
+            "marginRight": 60,
+            "marginBottom": 40
+        }
+    }],
+
+    "styles": {},
+    "layouts": {
+        "Template1": {
+            "parameters": [
+                "listImages",
+                "listText"
+            ],
+            "item": [{
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "direction": "column",
+                "items": [{
+                        "type": "Container",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "direction": "column",
+                        "items": [{
+                            "type": "Sequence",
+                            "id": "hSequenceId",
+                            "scrollDirection": "horizontal",
+                            "position": "absolute",
+                            "numbered": true,
+                            "width": "100vw",
+                            "height": "100vh",
+                            "item": [{
+                                "type": "Container",
+                                "width": "100vw",
+                                "height": "100vh",
+                                "direction": "column",
+                                "items": [{
+                                    "type": "Sequence",
+                                    "id": "vSequenceId",
+                                    "scrollDirection": "vertical",
+                                    "position": "absolute",
+                                    "numbered": true,
+                                    "width": "100vw",
+                                    "height": "100vh",
+                                    "data": "${listImages}",
+
+                                    "items": [{
+                                        "type": "Image",
+                                        "source": "${data.image}",
+                                        "width": "100vw",
+                                        "height": "100vh",
+                                        "scale": "best-fill"
+                                    }]
+                                }]
+                            }]
+                        }]
+                    },
+
+                    {
+                        "type": "Container",
+                        "height": "0vh",
+                        "data": "${listText}",
+                        "numbered": true,
+                        "items": [{
+                            "type": "Text",
+                            "id": "speechPlaceHolderText${ordinal}",
+                            "speech": "${data.speech}",
+                            "opacity": "0",
+                            "text": "${data.speechText}"
+                        }]
+                    }
+                ]
+            }]
+        }
+    },
+    "mainTemplate": {
+        "parameters": ["datasource"],
+        "item": [{
+            "type": "Template1",
+            "listImages": "${datasource.lego.properties.images.listImages}",
+            "listText": "${datasource.lego.properties.text.listText}"
+        }]
+    }
+}

@@ -1,0 +1,130 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "settings": {},
+    "theme": "dark",
+    "import": [],
+    "resources": [],
+    "styles": {},
+    "onMount": [],
+    "graphics": {},
+    "commands": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "datasource"
+        ],
+        "items": [{
+            "type": "Container",
+            "width": "100%",
+            "height": "100%",
+            "items": [{
+                    "type": "Image",
+                    "width": "100vw",
+                    "height": "100vh",
+                    "source": "${datasource.lego.properties.images.imageBackground}",
+                    "scale": "fill"
+                },
+                {
+                    "type": "Container",
+                    "width": "100vw",
+                    "height": "100vh",
+                    "item": [{
+                            "description": "forward arrow",
+                            "type": "TouchWrapper",
+                            "width": "45vw",
+                            "height": "50vh",
+                            "onPress": {
+                                "type": "SendEvent",
+                                "arguments": [
+                                    "forward"
+                                ]
+                            },
+                            "item": [{
+                                "type": "Image",
+                                "width": "43vw",
+                                "height": "48vh",
+                                "paddingLeft": "1vw",
+                                "paddingTop": "1vh",
+                                "source": "${datasource.lego.properties.images.arrow_up}",
+                                "scale": "fill"
+                            }],
+                            "alignSelf": "center",
+                            "position": "relative"
+                        },
+                        {
+                            "description": "backward arrow",
+                            "type": "TouchWrapper",
+                            "width": "45vw",
+                            "height": "50vh",
+                            "alignSelf": "center",
+                            "position": "relative",
+                            "onPress": {
+                                "type": "SendEvent",
+                                "arguments": [
+                                    "backward"
+                                ]
+                            },
+                            "item": [{
+                                "type": "Image",
+                                "width": "43vw",
+                                "height": "48vh",
+                                "paddingLeft": "1vw",
+                                "paddingTop": "1vh",
+                                "source": "${datasource.lego.properties.images.arrow_down}",
+                                "scale": "fill"
+                            }]
+                        },
+                        {
+                            "description": "left arrow",
+                            "type": "TouchWrapper",
+                            "width": "27.5vw",
+                            "height": "100vh",
+                            "position": "absolute",
+                            "onPress": {
+                                "type": "SendEvent",
+                                "arguments": [
+                                    "left"
+                                ]
+                            },
+                            "item": [{
+                                "type": "Image",
+                                "width": "25.5vw",
+                                "height": "88vh",
+                                "paddingLeft": "1vw",
+                                "paddingTop": "11vh",
+                                "source": "${datasource.lego.properties.images.arrow_left}",
+                                "scale": "fill"
+                            }]
+                        },
+                        {
+                            "description": "right arrow",
+                            "type": "TouchWrapper",
+                            "width": "27.5vw",
+                            "height": "100vh",
+                            "alignSelf": "end",
+                            "position": "absolute",
+                            "onPress": {
+                                "type": "SendEvent",
+                                "arguments": [
+                                    "right"
+                                ]
+                            },
+                            "item": [{
+                                "type": "Image",
+                                "width": "25.5vw",
+                                "height": "88vh",
+                                "paddingLeft": "1vw",
+                                "paddingTop": "11vh",
+                                "source": "${datasource.lego.properties.images.arrow_right}",
+                                "scale": "fill"
+                            }]
+                        }
+                    ],
+                    "alignSelf": "center",
+                    "position": "absolute"
+                }
+            ]
+        }]
+    }
+}

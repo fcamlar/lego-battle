@@ -1,0 +1,69 @@
+{
+    "speakLaunchRequest": [
+        "Hola, esta es la skill de la batalla de lego. Puedes pedirle al robot que se vaya a diferentes lugares, que ajuste la velociudad o apunte a un objetivo concreto, que cambie y use las diferentes armas, que encuentre un color en la línea de colores, pero también puedes usar el mando de control remoto de la pantalla de alexa o el de lego mindstorms. ",
+        "<voice name='Enrique'> Hola, jefe. Estoy aqui para cumplir sus ordenes, asi que dígame lo que debo hacer </voice>"
+    ],
+    "speakNoGadget": [
+        "No puede encontrar ningún Brick conectado a este dispositivo Eco. Por favor, asegurese de que el Brick EV3 está conectado e inténtelo de nuevo. "
+    ],
+    "speakChangeTool": [
+        "OK, el robot ha dejado la herramienta ",
+        " ,y ahora el armá que lleva el robot montada es "
+    ],
+    "speakToolNotKnown": [
+        "No se cual es el arma que llevo. Me puedes decir cual es? "
+    ],
+    "speakUseTool": [
+        " Entendido!, Voy a usar la herramienta ",
+        " para eliminar el objetivo. "
+    ],
+    "speakNotRightTool": [
+        " Lo siento jéfe, No puedo usar la herramienta ",
+        " para ejecutar su orden. Quizás necesite cambiar el arma. "
+    ],
+    "speakGoSomewhere": [
+        " De acuerdo jefe, moviendome hacie el destino:  "
+    ],
+    "speakHomeButtonEvent": [
+        " Por fin en casa!. "
+    ],
+    "speakAlreadyThere": [
+        " Me encuentro ya en ese lugar. que quiere que haga? "
+    ],
+    "speakFindColor": [
+        " Eso es fácil. Buscando el color indicado. "
+    ],
+    "speakFindColorEvent": [
+        " Color "
+    ],
+    "speakFindColorTargetEvent": [
+        " Hey, he encontrado el color  "
+    ],
+    "speakNoFindColorEvent": [
+        " No he encointrado el color. "
+    ],
+    "speakSetSpeed": [
+        " Perfecto! Pongo la velocidad "
+    ],
+    "speakSetTarget": [
+        " A su servicio! Objetivo definido, "
+    ],
+    "speakRemoteContol": [
+        " <audio src='soundbank://soundlibrary/transportation/amzn_sfx_car_honk_long_1x_02'/> <amazon:emotion name='excited' intensity='high'> Ahora puede usar las flechas de la pantalla para mover el robot hacia adelante, atras, torcer a izquierda o derecha 90 grados.</amazon:emotion>"
+    ],
+    "speakNoDisplay": [
+        " Este dispositivo echo no tiene pantalla en la qu epoder mostrar el mando de control remoto del robot. "
+    ],
+    "speakNoPositionKnown": [
+        " Como se ha usado el mando de control remoto para mover el robot, no se conoce la posición.",
+        " Por favor, ponga el robot en la posición inicial home y pulse el botón que tiene el robot."
+    ],
+    "speakNoPositionKnownColor": [
+        " Como se ha encontrado el color buscado y este puede variar, no se conoce la posición.",
+        " Por favor, ponga el robot en la posición inicial home y pulse el botón que tiene el robot."
+    ],
+    "speakHelp": " Puedes pedirme cosas como: muevete al helipuerto, el arma es l apistola, el objetivo es el barco, encuentra un color específico, vuelve a casa, dispara la pistola, muestrame el mando a distancia, y yo le mando esa orden al robot",
+    "speakCancelAndStopSpeechOutput": " Ha sido un placer, nos oimos pronto. ",
+    "speakError": "Lo siento, He tenido un problema para ejecutal lo que me pedias. Inténtalo de nuevo."
+
+}

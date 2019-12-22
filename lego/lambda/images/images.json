@@ -1,0 +1,61 @@
+{
+    "imageArrows": {
+        "imageBackground": "https://legomindstorms.s3.amazonaws.com/pictures/backgroung_arrows.jpg",
+        "arrow_up": "https://legomindstorms.s3.amazonaws.com/pictures/arrow_up.png",
+        "arrow_down": "https://legomindstorms.s3.amazonaws.com/pictures/arrow_down.png",
+        "arrow_left": "https://legomindstorms.s3.amazonaws.com/pictures/arrow_left.png",
+        "arrow_right": "https://legomindstorms.s3.amazonaws.com/pictures/arrow_right.png"
+    },
+    "imageLaunchRequest": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/backgroung.jpg",
+        "https://legomindstorms.s3.amazonaws.com/pictures/robot.jpg"
+    ],
+    "imageNoGadget": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/backgroung_arrows.jpg"
+    ],
+    "imageChangeTool": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/ChangeTool/",
+        "https://legomindstorms.s3.amazonaws.com/pictures/ChangeTool/"
+    ],
+    "imageUseTool": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/ChangeTool/"
+    ],
+    "imageNotRightTool": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/ChangeTool/"
+    ],
+    "imageGoSomewhere": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/GoSomewhere/"
+    ],
+    "imageHomeButtonEvent": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/GoSomewhere/home.jpg"
+    ],
+    "imageAlreadyThere": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/GoSomewhere/"
+    ],
+    "imageFindColor": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/FindColor/"
+    ],
+    "imageFindColorEvent": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/done.jpg"
+    ],
+    "imageFindColorTargetEvent": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/colorFound.jpg"
+    ],
+    "imageNoFindColorEvent": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/notFound.jpg"
+    ],
+    "imageSetSpeed": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/SetSpeed/"
+    ],
+    "imageSetTarget": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/SetTarget/"
+    ],
+    "imageNoPositionKnown": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/NoPositionKnown.jpg",
+        "https://legomindstorms.s3.amazonaws.com/pictures/GoSomewhere/home.jpg"
+    ],
+    "NoPositionKnownColor": [
+        "https://legomindstorms.s3.amazonaws.com/pictures/NoPositionKnown.jpg",
+        "https://legomindstorms.s3.amazonaws.com/pictures/GoSomewhere/home.jpg"
+    ]
+}
